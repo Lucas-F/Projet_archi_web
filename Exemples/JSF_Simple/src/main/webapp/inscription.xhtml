@@ -1,0 +1,166 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+    
+    <h:head>
+        <script type="text/javascript" language="javascript">
+            function confirmDelete(){
+                if (confirm("Voulez-vous supprimmer le(s) livre(s) s&eacute;lectionn&eacute;(s) ?"))
+                    return true;
+                return false;
+            }
+        </script>
+
+        <title>Site de rencontre pour bogoss</title>
+    </h:head>
+    <h:body>
+        <h1>Bienvenue sur Bogossland</h1>
+        <hr/>
+        <h:form>
+        <table border="0">
+            
+            <span style="
+                  color:red; 
+                  font-weight: bold; 
+                  font-family:'Times new Roman'; 
+                  font-size-adjust:1;
+            "> 
+                Informations générales
+            </span>  
+            <tr>
+                <td><h:outputLabel value="Nom : "/></td>
+                <td><h:inputText value="#{profilController.profil.name}" required="true"/>
+                </td>
+            </tr>
+             <tr>
+                <td><h:outputLabel value="Prénoms : "/></td>
+                <td><h:inputText value="#{profilController.profil.prenom}" required="true"/>
+                </td>
+            </tr>
+             <tr>
+                <td><h:outputLabel value="Âge : "/></td>
+                <td><h:inputText value="#{profilController.profil.age}" required="true"/>
+                </td>
+            </tr>
+             <tr>
+                <td><h:outputLabel value="Ville : "/></td>
+                <td><h:inputText value="#{profilController.profil.adresse}" required="true"/>
+                </td>
+            </tr>
+             <tr>
+                <td><h:outputLabel value="Département : "/></td>
+                <td><h:inputText value="#{bookController.book.isbn}" required="true"/>
+                </td>
+            </tr>
+             <tr>
+                <td><h:outputLabel value="Statut : "/></td>
+                <td><p:selectOneRadio value="#{profilController.profil.statut}">
+                        <f:selectItem itemLabel="celibataire" itemValue="celibataire"/>
+                        <f:selectItem itemLabel="divorcé" itemValue="divorcé"/>
+                        <f:selectItem itemLabel="marié(e)" itemValue="marié(e)"/>
+                    
+                    </p:selectOneRadio>
+                </td>
+            </tr>
+            <tr>
+                <td><h:outputLabel value="Taille : "/></td>
+                <td> <p:selectOneMenu value="#{bookController.book.isbn}">
+                    <f:selectItem itemLabel="140" itemValue="140"/>
+                    <f:selectItem itemLabel="145" itemValue="145"/>
+                    <f:selectItem itemLabel="150" itemValue="150"/>
+                    <f:selectItem itemLabel="155" itemValue="155"/>
+                    <f:selectItem itemLabel="160" itemValue="160"/>
+                    <f:selectItem itemLabel="165" itemValue="165"/>
+                    <f:selectItem itemLabel="170" itemValue="170"/>
+                    <f:selectItem itemLabel="175" itemValue="175"/>
+                    <f:selectItem itemLabel="180" itemValue="180"/>
+                    <f:selectItem itemLabel="185" itemValue="185"/>
+                    <f:selectItem itemLabel="190" itemValue="190"/>
+                    <f:selectItem itemLabel="195" itemValue="195"/>
+                </p:selectOneMenu>
+                </td>
+                
+              
+            </tr>
+            
+             <tr>
+                <td><h:outputLabel value="Adresse e-mail : "/></td>
+                <td><h:inputText value="#{bookController.book.isbn}" required="true"/>
+                </td>
+            </tr>
+             <tr>
+                <td><h:outputLabel value="Centres d'intêrets : "/></td>
+                <td><h:inputTextarea value="#{bookController.book.isbn}" required="true"/>
+                </td>
+            </tr>
+             <tr>
+                <td><h:outputLabel value="Description : "/></td>
+                <td><h:inputTextarea value="#{bookController.book.isbn}" required="true"/>
+                </td>
+            </tr>
+            <tr>
+                <td><h:outputLabel value="Sexe : "/></td>
+                <td><p:selectOneRadio value="#{bookController.book.isbn}">
+                        <f:selectItem itemLabel="Femme" itemValue="Femme"/>
+                        <f:selectItem itemLabel="Homme" itemValue="Homme"/>
+                    </p:selectOneRadio>
+                </td>
+                
+            </tr>
+            <tr>
+                <td><h:outputLabel value="Gouts en musique : "/></td>
+                <td>   <p:selectManyCheckbox  value="#{bookController.book.isbn}">
+                        <f:selectItem itemLabel="Rock" itemValue="Rock" />
+                        <f:selectItem itemLabel="Pop" itemValue="Pop" />
+                        <f:selectItem itemLabel="R'n'b" itemValue="R'n'b" />
+                    </p:selectManyCheckbox>
+                </td>
+            </tr>
+            <tr>
+                <td><h:outputLabel value="Centres d'interets : "/></td>
+                <td>   <p:selectManyCheckbox  value="#{bookController.book.isbn}">
+                        <f:selectItem itemLabel="Cinema" itemValue="Cinema" />
+                        <f:selectItem itemLabel="Famille" itemValue="Famille" />
+                        <f:selectItem itemLabel="Sport" itemValue="Sport" />
+                    </p:selectManyCheckbox>
+                </td>
+            </tr>
+             <tr>
+                <td><h:outputLabel value="caractère : "/></td>
+                <td><p:selectOneRadio value="#{bookController.book.isbn}">
+                        <f:selectItem itemLabel="gentil(le)" itemValue="gentil(le)"/>
+                        <f:selectItem itemLabel="sympa" itemValue="sympa"/>
+                    </p:selectOneRadio>
+                </td>
+                
+            </tr>
+            <tr>
+                <td><h:outputLabel value="Enfant : "/></td>
+                <td><p:selectOneRadio value="#{bookController.book.isbn}">
+                        <f:selectItem itemLabel="Oui" itemValue="Oui"/>
+                        <f:selectItem itemLabel="Non" itemValue="Non"/>
+                    </p:selectOneRadio>
+                </td> 
+            </tr>
+           
+        </table>
+        
+         <h:commandButton value="Créer" action="#{bookController.doCreate}"/>
+    </h:form>
+
+    <h:form>
+        <h:commandButton value="Annuler" action="#{bookController.doCancel}"/>
+    </h:form>
+        <hr/>
+    </h:body>
+</html>
+
+

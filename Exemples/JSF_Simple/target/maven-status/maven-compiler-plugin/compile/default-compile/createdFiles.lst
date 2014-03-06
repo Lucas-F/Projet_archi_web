@@ -1,0 +1,6 @@
+com/mycompany/biblio/business/BookEJB.class
+com/mycompany/biblio/controller/ProfilController.class
+com/mycompany/biblio/business/ProfilEJB.class
+com/mycompany/biblio/model/Profil.class
+com/mycompany/biblio/model/Book.class
+com/mycompany/biblio/controller/BookController.class

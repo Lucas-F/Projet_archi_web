@@ -1,0 +1,7 @@
+com/mycompany/biblio/business/BookEJB.class
+com/mycompany/biblio/model/User.class
+com/mycompany/biblio/model/Permission.class
+com/mycompany/biblio/model/Role.class
+com/mycompany/biblio/controller/LoginController.class
+com/mycompany/biblio/model/Book.class
+com/mycompany/biblio/controller/BookController.class

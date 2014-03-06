@@ -1,0 +1,13 @@
+----------------------------------------------------------------
+Sun Mar 02 16:26:04 CET 2014:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.10.1.1 - (1458268): instance a816c00e-0144-8366-ec50-0000040b9488 
+on database directory /home/morgan/Bureau/Archi applis/Exemples/JPA_Example/SimpleJPA with class loader sun.misc.Launcher$AppClassLoader@ab58d 
+Loaded from file:/home/morgan/.m2/repository/org/apache/derby/derby/10.10.1.1/derby-10.10.1.1.jar
+java.vendor=Oracle Corporation
+java.runtime.version=1.7.0_51-b13
+user.dir=/home/morgan/Bureau/Archi applis/Exemples/JPA_Example
+os.name=Linux
+os.arch=i386
+os.version=3.11.0-15-generic
+derby.system.home=null
+Database Class Loader started - derby.database.classpath=''
