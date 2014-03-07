@@ -1,0 +1,76 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html">
+<h:head>
+    <title>Edit a profil</title>
+</h:head>
+<h:body>
+    <h1>Edit a profil</h1>
+    <hr/>
+    <h:form>
+        <table border="0">
+            <tr>
+                <td><h:outputLabel value="Nom : "/></td>
+                <td><h:inputText value="#{profilController.profil.name}" required="true"/>
+                </td>
+            </tr>
+            <tr>
+                <td><h:outputLabel value="Prenom :"/></td>
+                <td><h:inputText value="#{profilController.profil.prenom}"/></td>
+            </tr>
+            <tr>
+                <td><h:outputLabel value="Age : "/></td>
+                <td><h:inputText value="#{profilController.profil.age}"/></td>
+            </tr>
+            <tr>
+                <td><h:outputLabel value="Sexe  : "/></td>
+                <td><h:inputTextarea value="#{profilController.profil.sexe}" cols="20" rows="5"/></td>
+            </tr>
+            <tr>
+                <td><h:outputLabel value="Statut : "/></td>
+                <td><h:inputText value="#{profilController.profil.statut}"/></td>
+            </tr>
+            <tr>
+                <td><h:outputLabel value="Taille : "/></td>
+                <td><h:inputText value="#{profilController.profil.taille}"/></td>
+            </tr>
+            <tr>
+                <td><h:outputLabel value="Ville : "/></td>
+                <td><h:inputText value="#{profilController.profil.adresse}"/></td>
+            </tr>
+             <tr>
+                <td><h:outputLabel value="Mail : "/></td>
+                <td><h:inputText value="#{profilController.profil.mail}"/></td>
+            </tr>
+             <tr>
+                <td><h:outputLabel value="Musique : "/></td>
+                <td><h:inputText value="#{profilController.profil.musique}"/></td>
+            </tr>
+            <tr>
+                <td><h:outputLabel value="Interet : "/></td>
+                <td><h:inputText value="#{profilController.profil.interet}"/></td>
+            </tr>
+            <tr>
+                <td><h:outputLabel value="Caractere : "/></td>
+                <td><h:inputText value="#{profilController.profil.caractere}"/></td>
+            </tr>
+            <tr>
+                <td><h:outputLabel value="Enfant : "/></td>
+                <td><h:inputText value="#{profilController.profil.enfant}"/></td>
+            </tr>
+            <tr>
+                <td><h:outputLabel value="Description : "/></td>
+                <td><h:inputText value="#{profilController.profil.description}"/></td>
+            </tr>
+        </table>
+
+        <h:commandButton value="Sauver" action="#{profilController.doSave}"/>
+
+    </h:form>
+    <h:form>
+        <h:commandButton value="Annuler" action="#{profilController.doCancel}"/>
+    </h:form>
+    <hr/>
+</h:body>
+</html>
