@@ -1,7 +1,9 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
         "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:h="http://java.sun.com/jsf/html">
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
 <h:head>
     <title>Message</title>
 </h:head>
@@ -11,13 +13,32 @@
     <h:form>
         <table border="0">
             <tr>
+                <h:dataTable value="#{profilController.profilList}" var="pl" border="1">
+                <h:column>
+                    <h:selectBooleanCheckbox value="#{pl.selected}"/>
+                </h:column>        
+                <h:column>
+                    
+                       
+                    <p:selectOneRadio value="#{messageController.message.iddestinataire}"/>
+                        <f:selectItem itemLabel="#{pl.name}" itemValue="#{pl.id}140"/>
+                        <h:outputText value="#{pl.name}"/>
+                
+                </h:column>
+                
+               
+                
+            </h:dataTable>
+
+            </tr>
+            <tr>
                 <td><h:outputLabel value="Sujet : "/></td>
-                <td><h:inputText value="#{profilController.profil.name}" required="true"/>
+                <td><h:inputText value="#{messageController.message.sujet}" required="true"/>
                 </td>
             </tr>
             <tr>
                 <td><h:outputLabel value="Description : "/></td>
-                <td><h:inputTextarea value="#{profilController.profil.description}"/></td>
+                <td><h:inputTextarea value="#{messageController.message.contenu}"/></td>
             </tr>
         </table>
 
@@ -25,8 +46,8 @@
 
     </h:form>
     <h:form>
-        <h:commandButton value="Envoyer" action="#{profilController.doSave}"/>
-        <h:commandButton value="Annuler" action="#{profilController.doCancel}"/>
+        <h:commandButton value="Envoyer" action="#{messageController.doSave}"/>
+        <h:commandButton value="Annuler" action="#{messageController.doCancel}"/>
     </h:form>
     <hr/>
 </h:body>
