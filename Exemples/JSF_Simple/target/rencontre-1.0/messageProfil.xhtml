@@ -16,17 +16,16 @@
                 </td>
             </tr>
             <tr>
-                
-            <tr>
                 <td><h:outputLabel value="Description : "/></td>
-                <td><h:inputText value="#{profilController.profil.description}"/></td>
+                <td><h:inputTextarea value="#{profilController.profil.description}"/></td>
             </tr>
         </table>
 
-        <h:commandButton value="Envoyer" action="#{profilController.doSave}"/>
+        
 
     </h:form>
     <h:form>
+        <h:commandButton value="Envoyer" action="#{profilController.doSave}"/>
         <h:commandButton value="Annuler" action="#{profilController.doCancel}"/>
     </h:form>
     <hr/>
